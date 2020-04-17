@@ -1,0 +1,114 @@
+"*":
+  Hydrogen:
+    autoScroll: false
+    kernelNotifications: true
+    outputAreaDock: true
+    showInspectorResultsInAutocomplete: true
+    wrapOutput: true
+  core:
+    disabledPackages: [
+      "markdown-preview"
+      "markdown-footnote"
+    ]
+    telemetryConsent: "limited"
+    themes: [
+      "atom-light-ui"
+      "solarized-light-syntax"
+    ]
+    useTreeSitterParsers: false
+    warnOnLargeFileLimit: 5
+  editor:
+    autoIndentOnPaste: false
+    preferredLineLength: 79
+    scrollPastEnd: true
+    showIndentGuide: true
+    showInvisibles: true
+    softWrap: true
+    softWrapAtPreferredLineLength: true
+    softWrapHangingIndent: 4
+    tabLength: 4
+  "exception-reporting":
+    userId: "af06818b-2633-4d85-9366-6223a3f85e14"
+  github:
+    remoteFetchProtocol: "ssh"
+  "hydrogen-python": {}
+  kite:
+    showWelcomeNotificationOnStartup: false
+  "markdown-pdf":
+    ghStyle: false
+  "markdown-preview-plus":
+    renderer: "pandoc"
+  "markdown-writer":
+    fileExtension: ".md"
+  "spell-check":
+    addKnownWords: true
+    localePaths: [
+      "/usr/lib/"
+    ]
+    locales: [
+      "de-DE"
+    ]
+  "theme-switcher":
+    uiThemeOne: "atom-dark-ui"
+    uiThemeTwo: "atom-light-ui"
+  typewriter: {}
+  "vim-mode-plus":
+    useClipboardAsDefaultRegister: true
+  welcome:
+    showOnStartup: false
+  "wrap-guide":
+    columns: [
+      72
+    ]
+    enable: true
+".coffee.source":
+  editor:
+    preferredLineLength: 79
+  "wrap-guide":
+    columns: [
+      79
+    ]
+".gfm.source":
+  editor:
+    preferredLineLength: 72
+  "wrap-guide":
+    columns: [
+      72
+    ]
+".i3.source":
+  editor:
+    preferredLineLength: 79
+  "wrap-guide":
+    columns: [
+      72
+      79
+    ]
+".md.pandoc.source":
+  editor:
+    preferredLineLength: 72
+  "wrap-guide":
+    enable: false
+".md.pweave.source":
+  "wrap-guide":
+    columns: [
+      72
+      79
+    ]
+".plain.text":
+  editor:
+    preferredLineLength: 72
+  "wrap-guide":
+    enable: false
+".python.source":
+  editor:
+    preferredLineLength: 79
+  "wrap-guide":
+    columns: [
+      72
+      79
+    ]
+".service.source":
+  "wrap-guide":
+    columns: [
+      72
+    ]

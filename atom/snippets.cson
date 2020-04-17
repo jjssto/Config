@@ -1,0 +1,72 @@
+'.source.pweave.md':
+  'python cell':
+    'prefix': 'pycell'
+    'body': """```{python, include = True, echo = False}
+			$0
+			```"""
+
+'.source.python':
+    'Docstring for a function':
+        'prefix': 'doc_fct'
+        'body': """\"\"\"
+            $1
+
+            Args:
+            -----
+            ${2:[variable]} : ${3:[type]}
+                ${4:[description]}
+
+            Returns:
+            --------
+            ${5,[type]}
+                ${6: [description]}
+            \"\"\"
+            """
+
+    'Docstring for a function that raises Exeptions':
+        'prefix': 'doc_exp'
+
+        'body': """\"\"\"
+            $1
+
+            Arguments:
+            ----------
+            ${2:[variable]} : ${3:[type]}
+                ${4:[description]}
+
+            Returns:
+            --------
+            ${5,[type]}
+                ${6: [description]}
+
+            Raise:
+            -------
+            ${7,[Exception]}
+                ${8,[description]}
+            \"\"\"
+            """
+
+    'Docstring for a class':
+        'prefix': 'doc_class'
+        'body': """\"\"\"
+            $1
+
+            Attributes:
+            -----------
+            ${2:[attribute]} : ${3:[type]}
+                ${4:[description]}
+
+            Methods:
+            --------
+            ${5,[method]}(${6,[arguments]})
+                ${7: [description]}
+            \"\"\"
+            """
+    'Docstring for a module':
+        'prefix': 'doc_mod'
+
+        'body': """
+            \"\"\"
+            $1    
+            \"\"\"
+            """

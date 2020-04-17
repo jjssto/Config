@@ -1,0 +1,35 @@
+---
+# Pandoc Markdown template for a PDF document
+# Template by jjssto
+
+lang: de
+papersize: a4
+fontsize: 12pt
+mainfont: TeX Gyre Heros
+
+options: "fromalign=right,backaddress=false,\
+	foldmarks=false,fromphone,fromemail,\
+	pagenumber=no,enlargefirstpage,firstfoot=false"
+# options: "fromalign=right,backaddress=true"
+# options: "fromalign=right,backaddress=false,\
+#	fromemail, fromphone"
+
+signature: ~/Pictures/signatur.png
+
+author: @name@
+phone: @phone@
+email: @email_@
+return-address:
+ - @returnaddress1@
+ - @returnaddress2@
+
+date: @date@
+
+place: @place@
+subject:
+address:
+ -
+opening:
+closing:
+encludes:
+---
