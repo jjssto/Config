@@ -1,9 +1,6 @@
 " Neovim configurations
 "
 " This file may be shared in accordance with the GPLv3
-"
-" Last modified: Fri Apr 17, 2020  02:17PM
-
 
 
 
@@ -19,7 +16,7 @@ set nocompatible
 " Pathogen
 execute pathogen#infect()
 
-syntax enable 
+syntax enable
 
 " Ensure unicode support
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -62,19 +59,19 @@ endif
 " adapt syntax highligting for dark background
 set background=dark
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Things happening if buffer changes
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Loading plugins and indentation rules according to file type and use the
-" templetes provided
+" Loading plugins and indentation rules according to file type and use
+" the templetes provided
 function! GetSkeleton(templet)
 	let l:dir="~/.config/nvim/templates/"
 	let l:path=l:dir . a:templet
 	exec '0r ' . l:path
-	"let l:date_ = system('date -I') 
-	let l:date  = substitute(system('date -I'), '\n\+$', '', '') 
+	"let l:date_ = system('date -I')
+	let l:date  = substitute(system('date -I'), '\n\+$', '', '')
 	exec '%s/<+TODAY+>/' . l:date .'\ /g'
 endfun
 
@@ -93,21 +90,19 @@ function! LastModified()
 endfun
 
 
-
-" jump back to last position when opening a file 
-
+" jump back to last position when opening a file
 if has("autocmd")
 
 	" Execute, when a new file is createt, and when it is opend
 	"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 	" options for various filetypes
-	autocmd BufNewFile,BufRead *.Rnw  set filetype=tex  syntax=rnoweb tw=80 fo-=t 
+	autocmd BufNewFile,BufRead *.Rnw  set filetype=tex  syntax=rnoweb tw=80 fo-=t
 	autocmd BufNewFile,BufRead *.Rscript  set filetype=r tw=80 fo-=t
 	autocmd BufNewFile,BufRead *.image  set filetype=r tw=80 fo-=t
 	autocmd BufNewFile,BufRead *.lmd  set filetype=markdown.pandoc tw=55 spell
 
 	autocmd BufNewFile,BufRead *.md  set  tw=55 spell
-	autocmd BufNewFile,BufRead *.txt  set  tw=72 
+	autocmd BufNewFile,BufRead *.txt  set  tw=72
 
 	autocmd BufNewFile,BufRead *.sh  set tw=80 fo-=t
 	autocmd BufNewFile,BufRead *.py  set tw=80 fo-=t
@@ -128,7 +123,7 @@ if has("autocmd")
 	augroup END
 
 
-	" Execute, when a file is opened 
+	" Execute, when a file is opened
 	"""""""""""""""""""""""""""""""""""""""
 	" return cursor to the location it was when the file was closed
 	autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -161,17 +156,17 @@ set mouse=a		" Enable mouse usage (all modes)
 let mapleader = "'"
 let maplocalleader = "]"
 
-
-
 set number
 set relativenumber
 
-" Fixes weird character problem in some devel versions neovim under tmux sesssion. This might go away in future.
+" Fixes weird character problem in some devel versions neovim underline
+" tmux sesssion. This might go away in future.
 set guicursor=
 
 
 
-" Remove white background of status line at bottom of nvim viewport (default is 2)
+" Remove white background of status line at bottom of nvim viewport
+" (default is 2)
 set laststatus=1
 
 
@@ -216,7 +211,7 @@ let R_tmux_close = 0
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" General 
+" General
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " execute make
 nnoremap <leader>mm :! make<CR>
@@ -225,7 +220,7 @@ nnoremap <leader>mm :! make<CR>
 map <F2> :set number<CR>
 
 map <F3> :set number relativenumber<CR>
-   
+
 map <F4> :set nonumber norelativenumber<CR>
 
 "" comand to switch on fixed textwidth
@@ -268,13 +263,17 @@ nnoremap <leader>R :source ~/.config/nvim/init.vim<CR>
 inoremap <c-j> <Esc>/<++><CR><Esc>cf>
 inoremap <c-k> <Esc>?<++><CR><Esc>cf>
 
+
+
+
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Lines & Formatting 
+" Lines & Formatting
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
 "
-" Shortcuts to create lines and stuff to structure text files and 
+" Shortcuts to create lines and stuff to structure text files and
 " comments
 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -335,7 +334,7 @@ nnoremap ==+ o<Space>-><Space>
 " Nvim-R
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " start R with F2 key
-map <F2> <Plug>RStart 
+map <F2> <Plug>RStart
 imap <F2> <Plug>RStart
 vmap <F2> <Plug>RStart
 
@@ -351,8 +350,9 @@ let R_assign = 2
 
 
 
-" Settings for vimcmdline 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Settings for vimcmdline
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " vimcmdline mappings
 let cmdline_map_start          = '<LocalLeader>s'
 let cmdline_map_send           = '<Space>'
@@ -424,7 +424,7 @@ let cmdline_tmux_conf = "~/vimcmdline_tmux.conf"
 
 
 " Ncm2
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " suppress the annoying 'match x of y', 'The only match' and 'Pattern not
 " found' messages
@@ -460,25 +460,25 @@ au User Ncm2Plugin call ncm2#register_source({
         \ })
 
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Setting for Pandoc
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 if !exists(":PP")
-	command PP call f_init#My_Pandoc_Fun("") 
+	command PP call f_init#My_Pandoc_Fun("")
 endif
 
 if !exists(":PPN")
-	command PPN call f_init#My_Pandoc_Fun("-N") 
+	command PPN call f_init#My_Pandoc_Fun("-N")
 endif
 
 noremap <leader>nn :execute('!zathura '.expand('%:r').'.pdf &' )<CR>
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NotMuch
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:notmuch_folders = [
 		\ [ 'inbox', 'tag:inbox' ],
 		\ [ 'to_do: heute', 'tag:heute' ],
@@ -528,10 +528,10 @@ let g:notmuch_reader = 'mutt -f %s'
 
 
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Setting for vim-table
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Make all tables Vim-Panoc compatible (ft specific rule in
 " /bundle/ftplugin)
@@ -539,9 +539,9 @@ let g:table_mode_corner_corner='+'
 let g:table_mode_corner='+'
 let g:table_mode_header_fillchar='='
 
+
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Setting for external programms
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
