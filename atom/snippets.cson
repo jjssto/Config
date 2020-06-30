@@ -7,7 +7,7 @@
 
 '.source.python':
     'Docstring for a function':
-        'prefix': 'doc_fct'
+        'prefix': 'doc'
         'body': """\"\"\"
             $1
 
@@ -18,8 +18,8 @@
 
             Returns:
             --------
-            ${5,[type]}
-                ${6: [description]}
+            ${5:[type]}
+                ${6:[description]}
             \"\"\"
             """
 
@@ -36,13 +36,13 @@
 
             Returns:
             --------
-            ${5,[type]}
+            ${5:[type]}
                 ${6: [description]}
 
             Raise:
             -------
-            ${7,[Exception]}
-                ${8,[description]}
+            ${7:[Exception]}
+                ${8:[description]}
             \"\"\"
             """
 
@@ -58,7 +58,7 @@
 
             Methods:
             --------
-            ${5,[method]}(${6,[arguments]})
+            ${5:[method]}(${6:[arguments]})
                 ${7: [description]}
             \"\"\"
             """
@@ -67,6 +67,6 @@
 
         'body': """
             \"\"\"
-            $1    
+            $1
             \"\"\"
             """

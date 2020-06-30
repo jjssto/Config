@@ -10,10 +10,10 @@
       "markdown-preview"
       "markdown-footnote"
     ]
-    telemetryConsent: "limited"
+    telemetryConsent: "no"
     themes: [
-      "atom-light-ui"
-      "solarized-light-syntax"
+      "atom-dark-ui"
+      "solarized-dark-syntax"
     ]
     useTreeSitterParsers: false
     warnOnLargeFileLimit: 5
@@ -51,6 +51,8 @@
   "theme-switcher":
     uiThemeOne: "atom-dark-ui"
     uiThemeTwo: "atom-light-ui"
+  "tree-view":
+    hideVcsIgnoredFiles: true
   typewriter: {}
   "vim-mode-plus":
     useClipboardAsDefaultRegister: true
@@ -71,6 +73,8 @@
 ".gfm.source":
   editor:
     preferredLineLength: 72
+    softWrapHangingIndent: 2
+    tabLength: 4
   "wrap-guide":
     columns: [
       72

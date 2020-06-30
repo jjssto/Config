@@ -1,0 +1,101 @@
+\documentclass[
+    foldmarks=BTm,       % show foldmarks top, middle, bottom
+		$papersize$,
+		$fontsize$,
+		$options$,
+    version=last         % latest version of KOMA letter
+]{scrlttr2}
+
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{parskip}
+
+\usepackage{graphicx}
+
+\usepackage{booktabs}
+\usepackage{longtable}
+
+\usepackage[right]{eurosym}
+
+%set font to TeX Gyre Heros
+\usepackage{tgheros}
+\renewcommand*\familydefault{\sfdefault}
+
+
+
+\makeatletter
+		\@setplength{sigbeforevskip}{0pt}
+\makeatother
+
+\makeatletter
+    \setlength{\@tempskipa}{-1.2cm}%
+    \@addtoplength{toaddrheight}{\@tempskipa}%
+\makeatother
+
+\setlength{\oddsidemargin}{\useplength{toaddrhpos}}
+\addtolength{\oddsidemargin}{-1in}
+\setlength{\textwidth}{\useplength{firstheadwidth}}
+
+\setkomavar*{fromphone}{}
+\setkomavar*{fromurl}{}
+\setkomavar*{fromemail}{}
+
+\begin{document}
+    \setkomavar{fromname}{$author$}
+    \renewcommand*{\raggedsignature}{\raggedright}
+    \setkomavar{fromaddress}{
+        $for(return-address)$
+            $return-address$$sep$\\
+        $endfor$
+    }
+    \setkomavar{fromphone}{$phone$}
+    \setkomavar{fromemail}{$email$}
+    %\setkomavar{signature}{$author$}
+		\setkomavar{signature}{%
+		\includegraphics[height=1.5cm]{$signature$}\\
+		$author$}	
+
+
+
+    \setkomavar{date}{$date$}
+    \setkomavar{place}{$place$}
+
+    \setkomavar{subject}{$subject$}
+
+		$if(confidential)$
+			\begin{letter}{%
+					\rule{0ex}{3ex}\textbf{pers\"onlich\,/\,vertraulich
+					}\vspace{1ex}\\%
+    	    $for(address)$
+    	        $address$$sep$\\
+    	    $endfor$
+    	}
+		$else$
+			\begin{letter}{%
+    	    $for(address)$
+    	        $address$$sep$\\
+    	    $endfor$
+    	}
+		$endif$
+
+        \opening{$opening$}
+
+        $body$
+
+        \closing{$closing$}
+
+        \ps $postskriptum$
+
+        %$if(encludes)$
+        %    \setkomavar*{enclseparator}{Anlage}
+        %    \encl{$encludes$}
+        %$endif$
+
+        $if(encludes)$
+            \setkomavar*{enclseparator}{}
+            \encl{--- $encludes$}
+        $endif$
+    \end{letter}
+\end{document}

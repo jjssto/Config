@@ -245,6 +245,8 @@ exec --no-startup-id i3-msg '$ws2; exec thunderbird;'
 ########################################################################
 # Startup applications
 ########################################################################
+exec xss-lock -- i3lock -n -c ffffff &
+exec xautolock -time 10 &
 exec xcape -e 'Caps_Lock=Escape'
 exec gxkb
 exec nitrogen --restore &

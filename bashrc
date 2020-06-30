@@ -28,7 +28,7 @@ shopt -s checkwinsize
 #shopt -s globstar
 
 # make less more friendly for non-text input files, see lesspipe(1)
-#[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
@@ -131,6 +131,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# completeion for pandoc
+eval "$(pandoc --bash-completion)"
+
 export GOPATH="$HOME/.local/lib/go"
 export PATH="$HOME/.local/bin:/snap/bin:$GOPATH:$PATH"
 
@@ -141,3 +144,5 @@ export MAIL="$HOME/Encfs/Plain/Mail/MAIL"
 
 
 systemctl --user import-environment PATH
+
+

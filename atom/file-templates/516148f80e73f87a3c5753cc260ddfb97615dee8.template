@@ -7,12 +7,14 @@ papersize: a4
 fontsize: 12pt
 mainfont: TeX Gyre Heros
 
-options: "fromalign=right,backaddress=false,\
+options: "fromalign=right,backaddress=true,\
 	foldmarks=false,fromphone,fromemail,\
 	pagenumber=no,enlargefirstpage,firstfoot=false"
 # options: "fromalign=right,backaddress=true"
 # options: "fromalign=right,backaddress=false,\
 #	fromemail, fromphone"
+
+# confidential: true
 
 signature: ~/Pictures/signatur.png
 
