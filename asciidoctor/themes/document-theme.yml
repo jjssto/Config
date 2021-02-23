@@ -1,0 +1,11 @@
+pdf-fontsdir: ../fonts
+
+extends: base
+page:
+    layout: portrait
+    margin: [0.8in, 1in, 0.8in, 1in]
+    size: a4
+base:
+    font-family: Helvetica
+
+

@@ -1,0 +1,13 @@
+= <++>
+Josef Stocker <josef.stocker@posteo.ch>
+v1, {docdate}
+:sectnums:
+:pdf-themesdir: /home/josef/.config/asciidoctor/themes
+:pdf-theme: document
+
+ifeval::[ "{backend}" == "pdf]
+[.text-center]
+{firstname} {lastname} -- {version-label} {revnumber}, {revdate}
+endif::[]
+
+<++>
