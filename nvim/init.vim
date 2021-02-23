@@ -101,8 +101,9 @@ if has("autocmd")
 	autocmd BufNewFile,BufRead *.image  set filetype=r tw=80 fo-=t
 	autocmd BufNewFile,BufRead *.lmd  set filetype=markdown.pandoc tw=55 spell
 
-	autocmd BufNewFile,BufRead *.md  set  tw=55 spell
+	autocmd BufNewFile,BufRead *.md  set  tw=72 spell
 	autocmd BufNewFile,BufRead *.txt  set  tw=72
+	autocmd BufNewFile,BufRead *.adoc  set  tw=72 spell
 
 	autocmd BufNewFile,BufRead *.sh  set tw=80 fo-=t
 	autocmd BufNewFile,BufRead *.py  set tw=80 fo-=t
@@ -120,6 +121,7 @@ if has("autocmd")
     	autocmd BufNewFile *.py call GetSkeleton("skeleton.py")
     	autocmd BufNewFile *.lmd call GetSkeleton("skeleton_l.md")
     	autocmd BufNewFile *.md call GetSkeleton("skeleton.md")
+    	autocmd BufNewFile *.adoc call GetSkeleton("skeleton.adoc")
 	augroup END
 
 
@@ -223,20 +225,20 @@ map <F3> :set number relativenumber<CR>
 
 map <F4> :set nonumber norelativenumber<CR>
 
-"" comand to switch on fixed textwidth
-map <leader>0 :set textwidth=0<CR>
-map <leader>50 :set textwidth=50<CR>
-map <leader>60 :set textwidth=60<CR>
-map <leader>70 :set textwidth=70<CR>
-map <leader>72 :set textwidth=72<CR>
-map <leader>73 :set textwidth=73<CR>
-map <leader>74 :set textwidth=74<CR>
-map <leader>75 :set textwidth=75<CR>
-map <leader>76 :set textwidth=76<CR>
-map <leader>77 :set textwidth=77<CR>
-map <leader>78 :set textwidth=78<CR>
-map <leader>79 :set textwidth=79<CR>
-map <leader>80 :set textwidth=80<CR>
+" "" comand to switch on fixed textwidth
+" map <leader>0 :set textwidth=0<CR>
+" map <leader>50 :set textwidth=50<CR>
+" map <leader>60 :set textwidth=60<CR>
+" map <leader>70 :set textwidth=70<CR>
+" map <leader>72 :set textwidth=72<CR>
+" map <leader>73 :set textwidth=73<CR>
+" map <leader>74 :set textwidth=74<CR>
+" map <leader>75 :set textwidth=75<CR>
+" map <leader>76 :set textwidth=76<CR>
+" map <leader>77 :set textwidth=77<CR>
+" map <leader>78 :set textwidth=78<CR>
+" map <leader>79 :set textwidth=79<CR>
+" map <leader>80 :set textwidth=80<CR>
 
 " Shortcut to execute the macro stored in register q
 nnoremap <F9> @q
@@ -538,6 +540,24 @@ let g:notmuch_reader = 'mutt -f %s'
 let g:table_mode_corner_corner='+'
 let g:table_mode_corner='+'
 let g:table_mode_header_fillchar='='
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Inserting dots 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+inoremap ,05 ○○○○○
+inoremap ,15 ●○○○○
+inoremap ,25 ●●○○○
+inoremap ,35 ●●●○○
+inoremap ,45 ●●●●○
+inoremap ,55 ●●●●●
+
+inoremap ,cc ○
+inoremap ,dd ●
+inoremap ,cb □
+inoremap ,cf ▣
+
 
 
 
