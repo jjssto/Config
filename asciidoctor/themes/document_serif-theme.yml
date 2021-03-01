@@ -1,14 +1,21 @@
-extends: default-with-fallback-font
+extends: default
 page:
     layout: portrait
     margin: [0.8in, 1in, 0.8in, 1in]
     size: a4
+
 base:
+  font-size: 11
+
+heading:
     font-family: Helvetica
-    font-size: 11
+
+title-page:
+  font-family: Helvetica
 
 blockquote:
     font-size: 11
 
 heading-h2:
     margin-top: $vertical-spacing * 2
+

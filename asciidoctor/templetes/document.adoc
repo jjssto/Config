@@ -1,8 +1,8 @@
 = <++>
-Josef Stocker <josef.stocker@posteo.ch>
+<++>
 v1, {docdate}
 :sectnums:
-:pdf-themesdir: /home/josef/.config/asciidoctor/themes
+:pdf-themesdir: {user-home}/.config/asciidoctor/themes
 :pdf-theme: document
 
 ifeval::[ "{backend}" == "pdf]
