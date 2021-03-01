@@ -1,0 +1,10 @@
+= <++>
+<++>
+v1, {docdate}
+:sectnums:
+:pdf-themesdir: :user-home:/.config/asciidoctor/themes
+:pdf-theme: document
+
+include::{user-home}/.config/asciidoctor/pdf_article_header.adoc
+
+<++>
