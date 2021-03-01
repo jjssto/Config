@@ -56,9 +56,6 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-#function PWDN {
-#	echo $PWD | sed -e 's/\/home\/josef\(.*\)/\~\1/'
-#}
 
 
 if [ "$color_prompt" = yes ]; then

@@ -256,7 +256,7 @@ exec nm-applet
 exec nextcloud
 exec pasystray
 exec rclone sync ~/Google_Drive/ google_drive:Laptop/
-# exec mate-terminal -e /home/josef/.local/bin/tmux_start
+# exec mate-terminal -e $HOME/.local/bin/tmux_start
 # exec telegram-desktop -startintray
 # exec mate-keyboard-properties --apply
 
@@ -293,12 +293,12 @@ bindsym XF86MonBrightnessDown exec light -U 20 # decrease screen brightness
 set $mode_system System: (l) lock, (e) logout, (s) suspend, (h) hibernate, (Shift+r) reboot, (Shift+s) shutdown
 bindsym $mod+Pause mode "$mode_system"
 mode "$mode_system" {
-    bindsym l exec --no-startup-id /home/josef/.local/bin/i3exit lock, mode "default"
-    bindsym e exec --no-startup-id /home/josef/.local/bin/i3exit logout, mode "default"
-    bindsym s exec --no-startup-id /home/josef/.local/bin/i3exit suspend, mode "default"
-    bindsym h exec --no-startup-id /home/josef/.local/bin/i3exit hibernate, mode "default"
-    bindsym Shift+r exec --no-startup-id /home/josef/.local/bin/i3exit reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id /home/josef/.local/bin/i3exit shutdown, mode "default"
+    bindsym l exec --no-startup-id $HOME/.local/bin/i3exit lock, mode "default"
+    bindsym e exec --no-startup-id $HOME/.local/bin/i3exit logout, mode "default"
+    bindsym s exec --no-startup-id $HOME/.local/bin/i3exit suspend, mode "default"
+    bindsym h exec --no-startup-id $HOME/.local/bin/i3exit hibernate, mode "default"
+    bindsym Shift+r exec --no-startup-id $HOME/.local/bin/i3exit reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id $HOME/.local/bin/i3exit shutdown, mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"

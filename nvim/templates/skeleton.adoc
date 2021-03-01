@@ -1,13 +1,10 @@
 = <++>
-<++> <<++>>
-v1, {docdate}
+<++> 
+v1, <++> 
 :sectnums:
-:pdf-themesdir: /home/josef/.config/asciidoctor/themes
+:pdf-themesdir: {user-home}/.config/asciidoctor/themes
 :pdf-theme: document
 
-ifeval::[ "{backend}" == "pdf]
-[.text-center]
-{firstname} {lastname} -- {version-label} {revnumber}, {revdate}
-endif::[]
+include::{user-home}/.config/asciidoctor/pdf_article_header.adoc
 
 <++>
